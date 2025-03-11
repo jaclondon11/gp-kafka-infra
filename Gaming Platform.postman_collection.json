@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "d1ff7b6d-ff1a-4912-bf31-0e895cd43755",
+		"name": "Gaming Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1176560"
+	},
+	"item": [
+		{
+			"name": "Game Events",
+			"item": [
+				{
+					"name": "level-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerId\": \"3\",\r\n    \"newLevel\": \"6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/v1/game-events/level-up",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"game-events",
+								"level-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item acquired",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerId\": \"123\",\r\n    \"itemName\": \"Sword of Azeroth\",\r\n    \"rarity\": \"EPIC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/v1/game-events/items/acquired",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"game-events",
+								"items",
+								"acquired"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "challenge completed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerId\": \"123\",\r\n    \"challengeName\": \"First Blood\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/v1/game-events/challenges/completed",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"game-events",
+								"challenges",
+								"completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pvp attack",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"attackerId\": \"123\",\r\n    \"defenderId\": \"321\",\r\n    \"damageDealt\": \"9999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/v1/game-events/pvp/attack",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"game-events",
+								"pvp",
+								"attack"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pvp defeat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"defeatedPlayerId\": \"123\",\r\n    \"victorPlayerId\": \"321\",\r\n    \"battleLocation\": \"Azeroth\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/v1/game-events/pvp/defeat",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"game-events",
+								"pvp",
+								"defeat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Social Events",
+			"item": [
+				{
+					"name": "friend request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"requesterId\": \"123\",\r\n    \"targetId\": \"321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/v1/social-events/friend-request",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"social-events",
+								"friend-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "friend acceptance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"acceptorId\": \"123\",\r\n    \"requesterId\": \"321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/v1/social-events/friend-acceptance",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"social-events",
+								"friend-acceptance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new follower",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"followerId\": \"123\",\r\n    \"targetId\": \"321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/v1/social-events/new-follower",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"social-events",
+								"new-follower"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
